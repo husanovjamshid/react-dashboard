@@ -62,9 +62,11 @@ function App() {
         <OverviewHeader />
         
         </Overview>
-        <div className="row mb-5 position-relative">
+        <div className='container'>
+        <div className="d-flex justify-content-between mb-5 position-relative">
         <Tickets/>
         <Tasks/>
+        </div>
         </div>
         </div>;
       }

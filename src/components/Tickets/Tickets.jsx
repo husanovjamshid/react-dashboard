@@ -2,7 +2,7 @@ import './tickets.scss'
 import ticketsData from './ticketsData'
 export const Tickets = () => {
     return (
-        <div className='tickets col-md-6 col-lg-6 col-xl-6'>
+        <div className='tickets '>
         <div className='tickets__content'>
         <div className='tickets__wrap'>
         <h2 className='tickets__title fw-bold'>Unresolved tickets</h2>

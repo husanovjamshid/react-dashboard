@@ -50,11 +50,19 @@ export const Tasks = () => {
         setModalClass(findTodo.class)
     }
 
+    let changeChecked = (evt) => {
+        let todoId = evt.target.dataset.todoId
+        let findTodo = todos.find((item) => item.id == todoId)
+        findTodo.isComleted = !findTodo.isComleted
+        setTodos([...todos])
+
+    }
+
     localStorage.setItem('todos', JSON.stringify(todos))
     
     
     return (
-        <div className='tasks col-md-6 col-lg-6 col-xl-6'>
+        <div className='tasks '>
         <div className='tasks__content'>
         <div className='tasks__wrap'>
         <h2 className='tasks__title fw-bold'>Tasks</h2>
@@ -79,7 +87,7 @@ export const Tasks = () => {
             <li className='tasks__item'>
             <div className='tasks__item-wrap'>
             <div>
-            <input className='form-check-input rounded-5' type="checkbox" />
+            <input  data-todo-id={item.id} checked={item.isComleted} onChange={changeChecked} className='form-check-input rounded-5' type="checkbox" />
             <span className='tasks__table ms-3'>{item.text}</span>
             </div>
             <button className={item.isClass}       
