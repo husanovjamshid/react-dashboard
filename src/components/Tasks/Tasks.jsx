@@ -35,10 +35,8 @@ export const Tasks = () => {
             ...todos,
             
         ])
-
         setCloses(true)
         inputValue.current.value = ''
-        
     }
     
     let tasksBtn = (evt) => {
@@ -49,17 +47,16 @@ export const Tasks = () => {
         setModalTask(findTodo.text);
         setModalClass(findTodo.class)
     }
-
+    
     let changeChecked = (evt) => {
         let todoId = evt.target.dataset.todoId
         let findTodo = todos.find((item) => item.id == todoId)
         findTodo.isComleted = !findTodo.isComleted
         setTodos([...todos])
-
+        
     }
-
-    localStorage.setItem('todos', JSON.stringify(todos))
     
+    localStorage.setItem('todos', JSON.stringify(todos))
     
     return (
         <div className='tasks '>
