@@ -27,14 +27,15 @@ export const Tasks = () => {
         evt.preventDefault()
         
         setTodos([
-            ...todos,
             {
                 id: todos.at(-1)?.id + 1 || 1,
                 text: inputValue.current.value,
                 isComleted: false,
                 isTask: modalTask,
                 isClass: modalClass
-            }
+            },
+            ...todos,
+            
         ])
 
         setCloses(true)
