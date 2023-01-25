@@ -44,6 +44,7 @@ export const Tasks = () => {
     }
     
     let tasksBtn = (evt) => {
+        evt.preventDefault()
         let todoId = evt.target.dataset.todoId
         let findTodo = tasks.find((item) => item.id == todoId)
         
