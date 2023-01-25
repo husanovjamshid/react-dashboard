@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulishs, sans-serifh:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: #f7f8fc;
+}
+
+.tasks {
+  padding: 0;
+  //   width: 100%;
+  //   max-width: 546px;
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+}
+
+.tasks__content {
+  padding: 32px 32px 0 32px;
+}
+
+.tasks__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.tasks__title {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #252733;
+}
+
+.tasks__link {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #3751ff;
+  text-decoration: none;
+}
+
+.tasks__group {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #9fa2b4;
+}
+
+.tasks__support {
+  font-weight: bold;
+}
+
+.tasks__list {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+  max-height: 204px;
+  overflow: hidden;
+}
+
+.tasks__item-wrap {
+  padding: 0 32px 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.tasks__item + .tasks__item {
+  margin-top: 20px;
+}
+
+.tasks__line {
+  display: block;
+  border: 1px solid #dfe0eb;
+  width: 100%;
+  margin-top: 20px;
+  max-width: 546px;
+}
+
+.tasks__table {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #252733;
+  margin: 0;
+}
+
+.tasks__price {
+  margin: 0;
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.form-check-input {
+  cursor: pointer !important;
+}
+
+.task__input {
+  border: none;
+  outline: none;
+}
+
+.task__form {
+  padding: 0 32px 0 32px;
+  margin-top: 37px;
+  margin-bottom: 17px;
+}
+
+.fa-circle-plus {
+  font-size: 26px;
+  background: #f0f1f7 !important;
+  border-radius: 8px !important;
+}
+
+.tasks__btn {
+  background-color: transparent !important;
+  border: none;
+}
+
+.tasks__modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 255px;
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 289px;
+  max-height: 176px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.modal__btns {
+  margin: 20px 0;
+}
+
+.fa-xmark {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  cursor: pointer;
+  font-size: 19px;
+}
