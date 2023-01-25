@@ -1,30 +1,21 @@
 import './tasks.scss'
 import { useRef, useState } from 'react'
+import tasks from './taskData'
 
 export const Tasks = () => {
+    let [modalTask, setModalTask] = useState()
+    let [modalClass, setModalClass] = useState()
     let itemText = useRef()
-    let [todos, setTodos] = useState([
-        {
-            id: 1,
-            text: 'Finish ticket update',
-            isComleted: false,
-            urgent: true,
-            new: false,
-            def: false
-            
-        }
+    let [todos, setTodos] = useState([    
+        
     ])
     let [closes, setCloses] = useState(true)
     
     let inputValue = useRef()
-    let [urgent, setUrgent] = useState()
     
     let handleSubmit = (evt) => {
         evt.preventDefault()
-        setCloses(false)
-        console.log(inputValue.current.value);
-        
-        inputValue.current.value = ''
+        setCloses(false) 
     }
     
     let modalClose = () => {
@@ -32,18 +23,31 @@ export const Tasks = () => {
         
     }
     
-    let urgents = (evt) => {
-        todos[0].urgent = !todos[0].urgent
-        setUrgent(todos[0].urgent);
-        console.log(urgent);
+    let sendModal = (evt) => {
+        evt.preventDefault()
+        
+        setTodos([
+            ...todos,
+            {
+                id: todos.at(-1)?.id + 1 || 1,
+                text: inputValue.current.value,
+                isComleted: false,
+                isTask: modalTask,
+                isClass: modalClass
+            }
+        ])
+
+        setCloses(true)
+        inputValue.current.value = ''
         
     }
     
-    let sendModal = () => {
-        // console.log(itemText.current);
+    let tasksBtn = (evt) => {
+        let todoId = evt.target.dataset.todoId
+        let findTodo = tasks.find((item) => item.id == todoId)
         
-        setCloses(true)
-        
+        setModalTask(findTodo.text);
+        setModalClass(findTodo.class)
     }
     
     
@@ -76,25 +80,24 @@ export const Tasks = () => {
             <input className='form-check-input rounded-5' type="checkbox" />
             <span className='tasks__table ms-3'>{item.text}</span>
             </div>
-            <button className={item.urgent ? 'btn btn-warning tasks__price' : 'tasks__price'}
-           
-            >Urgent</button>
+            <button className={item.isClass}       
+            >{item.isTask}</button>
             </div>
             <span className='tasks__line'></span>    
             </li>)
         }    
         </ul>
         
-        <div className={closes ? 'tasks__modal shadow d-none': 'tasks__modal shadow'}>
+        <form className={closes ? 'tasks__modal shadow d-none': 'tasks__modal shadow'}>
         <i onClick={modalClose} class="fa-solid fa-xmark text-muted"></i>
         <p className='modal__title'>Select status</p>
         <div className='d-flex justify-content-between modal__btns'>
-        <button onClick={urgents} className='btn btn-warning text-white'>Urgent</button>
-        <button   className='btn btn-success'>New</button>
-        <button  className='btn btn-light text-muted'>Default</button>
+        {
+            tasks.map((item) => <button data-todo-id={item.id} onClick={tasksBtn} className={item.class}>{item.text}</button>)
+        }
         </div>
-        <button onClick={sendModal} className='btn btn-light text-muted w-100 mb-2'><span className='fs-5'>+</span></button>
-        </div>
+        <button type='submit' onClick={sendModal} className='btn btn-light text-muted w-100 mb-2'><span className='fs-5'>+</span></button>
+        </form>
         </div>
         )
     }
