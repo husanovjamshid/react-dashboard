@@ -6,9 +6,7 @@ export const Tasks = () => {
     let [modalTask, setModalTask] = useState()
     let [modalClass, setModalClass] = useState()
     let itemText = useRef()
-    let [todos, setTodos] = useState([    
-        
-    ])
+    let [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos')) || [])
     let [closes, setCloses] = useState(true)
     
     let inputValue = useRef()
@@ -51,6 +49,8 @@ export const Tasks = () => {
         setModalTask(findTodo.text);
         setModalClass(findTodo.class)
     }
+
+    localStorage.setItem('todos', JSON.stringify(todos))
     
     
     return (
