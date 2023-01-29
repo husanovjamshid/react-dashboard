@@ -9,15 +9,13 @@ import Icon8 from './assets/images/nav-icon8.svg';
 
 const DataNavbar = [
   {
-    backgroundColor: '#3F4049',
-    color: '#DDE2FF',
-    borderLeft: '3px solid #9FA2B4',
     icon: Icon1,
     text: 'Overview',
   },
   {
     icon: Icon2,
     text: 'Tickets',
+    to: '/ticket'
   },
   {
     icon: Icon3,

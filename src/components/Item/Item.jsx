@@ -1,22 +1,27 @@
-import './item.scss';
+import "./item.scss";
+import { Link, NavLink } from "react-router-dom";
 
-const Navbar = ({ text, icon, color, backgroundColor, borderLeft, borderTop }) => {
+const Navbar = ({
+  text,
+  icon,
+  borderTop,
+  to,
+}) => {
   return (
     <li
-      className='nav__item'
-      style={{ backgroundColor, borderLeft, borderTop }}
+      className="nav__item"
     >
-      <a
-        href='./index.html'
-        className='nav__link'
-        style={{ color }} 
-      >
-        <img
-          src={icon}
-          alt='icon'
-        />
-        {text}
-      </a>
+      {text === "Tickets" ? (
+        <Link to="/ticket" className="nav__link" >
+          <img src={icon} alt="icon" />
+          {text}
+        </Link>
+      ) : (
+        <Link to="/" className="nav__link" >
+          <img src={icon} alt="icon" />
+          {text}
+        </Link>
+      )}
     </li>
   );
 };

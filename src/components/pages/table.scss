@@ -1,0 +1,65 @@
+.table__Wrap {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+}
+
+.ticket__top {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #252733;
+  font-weight: bold;
+}
+
+.ticket__bottom {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #c5c7cd;
+}
+
+.ticket__category {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #9fa2b4;
+}
+
+.ticket__link {
+  padding: 5px 12px !important;
+  border-radius: 100px;
+}
+
+.all__ticket {
+  font-weight: bold;
+  font-family: "Mulish";
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #252733;
+}
+
+.table__filter {
+  cursor: pointer;
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #4b506d;
+  display: flex;
+  align-items: center;
+}
+
+tr {
+  cursor: pointer;
+  //   transition: all 0.4s ease;
+}
+
+tr:hover {
+  background-color: #ffffffe8;
+}

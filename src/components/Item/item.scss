@@ -15,7 +15,7 @@
 }
 
 .nav__item:hover {
-  background-color: #3F4049;
+  background-color: #3f4049;
 }
 
 .nav__link {
@@ -28,3 +28,8 @@
   }
 }
 
+.active {
+  background-color: #3f4049;
+  border-left: 3px solid #9fa2b4;
+  color: #DDE2FF;
+}

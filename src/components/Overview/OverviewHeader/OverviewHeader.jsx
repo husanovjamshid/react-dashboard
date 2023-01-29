@@ -2,6 +2,7 @@ import NotificationIcon from '../../../assets/images/notification-icon.svg';
 import SearchIcon from '../../../assets/images/search-icon.svg';
 import UserImg from '../../../assets/images/account__user.png';
 import './overview-header.scss';
+import { Link } from 'react-router-dom';
 
 const OverviewHeader = () => {
   return (
