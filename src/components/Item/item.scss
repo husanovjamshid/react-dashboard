@@ -14,9 +14,9 @@
   }
 }
 
-.nav__item:hover {
-  background-color: #3f4049;
-}
+// .nav__item:hover {
+//   background-color: #3f4049;
+// }
 
 .nav__link {
   font-size: 16px;
@@ -31,5 +31,35 @@
 .active {
   background-color: #3f4049;
   border-left: 3px solid #9fa2b4;
-  color: #DDE2FF;
+  color: #dde2ff;
+}
+
+.ticket__select {
+  border: none;
+  outline: none;
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: #9fa2b4;
+  cursor: pointer;
+}
+
+.footer__page {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: #9fa2b4;
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.imgs img {
+  cursor: pointer;
 }

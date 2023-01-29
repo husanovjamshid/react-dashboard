@@ -2,6 +2,8 @@ import "./table.scss";
 import filter from "../../assets/images/filter.svg";
 import sort from "../../assets/images/sort.svg";
 import { data } from "../Data/data";
+import left from '../../assets/images/arrow - left.svg'
+import right from '../../assets/images/arrow - right.svg'
 
 export const TichketPage = () => {
   return (
@@ -65,6 +67,30 @@ export const TichketPage = () => {
             </tbody>
           ))}
         </table>
+
+        <div className="footer gap-5">
+          <p className="footer__page">
+            Rows per page:{" "}
+            <select className="ticket__select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </p>
+
+          <div className="d-flex align-items-center gap-3">
+          <p className="footer__page">1-8 of 1240 </p>
+          <div className="imgs">
+            <img src={left} alt="" />
+            <img src={right} alt="" />
+          </div>
+          </div>
+        </div>
       </div>
     </>
   );

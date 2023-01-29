@@ -12,7 +12,7 @@ const Navbar = ({
       className="nav__item"
     >
       {text === "Tickets" ? (
-        <Link to="/ticket" className="nav__link" >
+        <Link to="/ticket" className="nav__link " >
           <img src={icon} alt="icon" />
           {text}
         </Link>
